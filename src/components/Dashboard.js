@@ -43,7 +43,7 @@ const Dashboard = () => {
   return (
     <div style={{backgroundColor:"blue",display:"flex",justifyContent:"center",alignItems:"center",paddingBottom:"100vh"}}>
      
-    </div>
+    </div  >
   );
 };
 
