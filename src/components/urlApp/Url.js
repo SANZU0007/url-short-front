@@ -29,7 +29,7 @@ const URLShortener =  () => {
 
   return (
     <div>
-      <Typography variant="h4">URL Shortener</Typography>
+      <Typography variant="h4"></Typography>
       <TextField
         fullWidth
         variant="outlined"

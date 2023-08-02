@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { LoginContext } from "./contextapp/context";
 import { useNavigate } from "react-router-dom";
+import URLShortener from "./urlApp/Url";
 
 const Dashboard = () => {
   const { logindata, setLoginData } = useContext(LoginContext);
@@ -41,8 +42,16 @@ const Dashboard = () => {
 
   
   return (
-    <div style={{backgroundColor:"blue",display:"flex",justifyContent:"center",alignItems:"center",paddingBottom:"100vh"}}>
+
+
+    <div>
+      <h1 style={{padding:"10px"}}>Enter The Your Url..</h1>
+
+
      
+     
+     
+     <URLShortener/>
     </div  >
   );
 };
