@@ -35,7 +35,7 @@ const Header = () => {
 
     const data = await res.json();
     console.log(data);
-
+   history("/dash");
     if (data.status === 201) {
       console.log("use logout");
       localStorage.removeItem("usersdatatoken");
