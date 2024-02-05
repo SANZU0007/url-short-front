@@ -65,7 +65,7 @@ const Login = () => {
         <div className="form_data">
           <div className="form_heading">
             <h1>Welcome Back, Log In</h1>
-            <p>Hi, we are glad you are back. Please login.</p>
+            // <p>Hi, we are glad you are back. Please login.</p>
           </div>
 
           <form>
@@ -92,7 +92,7 @@ const Login = () => {
                   id="password"
                 />
                 <div
-                  className="showpass"
+                 id="password"
                   onClick={() => setPassShow(!passShow)}
                 >
                   {!passShow ? "show " : "Hide"}
