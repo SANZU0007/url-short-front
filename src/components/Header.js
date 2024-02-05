@@ -6,7 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const { logindata, setLoginData } = useContext(LoginContext);
+
 
   // console.log(logindata);
 
@@ -19,6 +19,11 @@ const Header = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleClose1 = () => {
+  history("/dash")
+  };
+
 
 
 
@@ -40,31 +45,18 @@ const Header = () => {
               "aria-labelledby": "basic-button",
             }}
           >
-            {logindata.validUserOne ? (
-              <>
-               
+      
 
                 <MenuItem
                   onClick={() => {
                     handleClose();
-                    history("/");
+                    handleClose1();
                   }}
                 >
                   Logout
                 </MenuItem>
-              </>
-            ) : (
-              <>
-                <MenuItem
-                  onClick={() => {
-                    handleClose();
-               
-                  }}
-                >
-                  Profile
-                </MenuItem>
-              </>
-            )}
+          
+         
           </Menu>
         </nav>
       </header>
