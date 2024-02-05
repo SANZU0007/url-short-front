@@ -58,7 +58,7 @@ const Header = () => {
                 <MenuItem
                   onClick={() => {
                     handleClose();
-                    goError();
+               
                   }}
                 >
                   Profile
