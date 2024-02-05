@@ -27,7 +27,7 @@ const Dashboard = () => {
       } else {
         console.log("User verified");
        setLoginData(data)
-       history("/dash")
+   
        
       }
     } catch (error) {
