@@ -20,38 +20,8 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-  const logoutuser = async () => {
-    let token = localStorage.getItem("usersdatatoken");
 
-    const res = await fetch("https://login-zft1.onrender.com/logout", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-        Accept: "application/json",
-      },
-      credentials: "include",
-    });
 
-    const data = await res.json();
-    console.log(data);
-   history("/dash");
-    if (data.status === 201) {
-      console.log("use logout");
-      localStorage.removeItem("usersdatatoken");
-      setLoginData(false);
-      history("/");
-    } else {
-      console.log("error");
-    }
-  };
-  const goDash = () => {
-    history("/dash");
-  };
-
-  const goError = () => {
-    history("*");
-  };
 
   return (
     <>
@@ -59,13 +29,7 @@ const Header = () => {
         <nav>
           <h1>URL-SHORT</h1>
           <div className="avtar">
-            {logindata.validUserOne ? (
-              <Avatar style={{ background: "red" }} onClick={handleClick}>
-                {logindata.validUserOne.fname[0]}
-              </Avatar>
-            ) : (
-              <Avatar style={{ background: "blue" }} onClick={handleClick} />
-            )}
+                         <Avatar onClick={handleClick} >URL</Avatar>
           </div>
           <Menu
             id="basic-menu"
@@ -78,14 +42,7 @@ const Header = () => {
           >
             {logindata.validUserOne ? (
               <>
-                <MenuItem
-                  onClick={() => {
-                    handleClose();
-                    goDash();
-                  }}
-                >
-                  Profile
-                </MenuItem>
+               
 
                 <MenuItem
                   onClick={() => {
