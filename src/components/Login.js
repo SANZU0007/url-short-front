@@ -52,7 +52,6 @@ const Login = () => {
         localStorage.setItem("usersdatatoken", res.result.token);
         history("/dash");
 
-        // alert("success fully register to your Account")
 
         setInpval({ ...inpval, email: "", password: "" });
       }
