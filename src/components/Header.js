@@ -90,7 +90,7 @@ const Header = () => {
                 <MenuItem
                   onClick={() => {
                     handleClose();
-                    logoutuser();
+                    history("/");
                   }}
                 >
                   Logout
